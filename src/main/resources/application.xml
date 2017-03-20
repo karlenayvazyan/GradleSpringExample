@@ -3,5 +3,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <import resource="daos.xml"/>
+
     <import resource="services.xml"/>
+
+    <import resource="constuctorArgument.xml"/>
+
+    <import resource="factoryMethod.xml"/>
+
+    <import resource="setter.xml"/>
 </beans>

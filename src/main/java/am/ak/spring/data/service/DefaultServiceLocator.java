@@ -13,4 +13,8 @@ public class DefaultServiceLocator {
     public DefaultServiceLocator getInstance() {
         return defaultServiceLocator;
     }
+
+    public DefaultServiceLocator getInstanceSecond() {
+        return defaultServiceLocator;
+    }
 }

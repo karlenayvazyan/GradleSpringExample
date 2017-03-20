@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="clientService" class="am.ak.spring.data.service.ClientService" factory-method="getInstance"/>
+
+    <bean id="serviceLocation" class="am.ak.spring.data.service.DefaultServiceLocator"/>
+
+    <bean id="defaultService"
+          factory-bean="serviceLocation"
+          factory-method="getInstance"/>
+
+    <bean id="defaultServiceSecond"
+          factory-bean="serviceLocation"
+          factory-method="getInstanceSecond"/>
+</beans>
