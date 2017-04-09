@@ -1,3 +1,5 @@
+package am.ak.spring.data;
+
 import am.ak.spring.data.setter.SimpleMovieLister;
 import org.junit.Test;
 
@@ -10,7 +12,7 @@ public class SetterTest extends BaseTest {
 
     @Test
     public void testInitResourceBySetter() {
-        SimpleMovieLister simpleMovieLister = applicationContext.getBean("simpleMovieListerSetter", SimpleMovieLister.class);
+        SimpleMovieLister simpleMovieLister = BaseTest.applicationContext.getBean("simpleMovieListerSetter", SimpleMovieLister.class);
         assertNotNull(simpleMovieLister);
         assertNotNull(simpleMovieLister.getMovieFinder());
     }

@@ -11,4 +11,12 @@
     <import resource="factoryMethod.xml"/>
 
     <import resource="setter.xml"/>
+
+    <import resource="util.xml"/>
+
+    <import resource="lookupmethod.xml"/>
+
+    <import resource="scope.xml"/>
+
+    <import resource="postprocessor.xml"/>
 </beans>

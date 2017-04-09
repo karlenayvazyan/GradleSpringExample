@@ -1,3 +1,5 @@
+package am.ak.spring.data;
+
 import am.ak.spring.data.canstuctor.ExampleBean;
 import am.ak.spring.data.canstuctor.Foo;
 import am.ak.spring.data.canstuctor.SimpleMovieLister;

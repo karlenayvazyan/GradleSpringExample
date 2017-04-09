@@ -5,4 +5,20 @@
     <bean id="simpleMovieListerSetter" class="am.ak.spring.data.setter.SimpleMovieLister">
         <property name="movieFinder" ref="movieFinder"/>
     </bean>
+
+    <!--<bean id="bean2" class="am.ak.spring.data.circular.A">-->
+        <!--<constructor-arg ref="bean1"/>-->
+    <!--</bean>-->
+
+    <bean id="bean2" class="am.ak.spring.data.circular.A">
+        <property name="b" ref="bean1"/>
+        <property name="targetName">
+            <idref bean="bean1"/>
+        </property>
+    </bean>
+
+    <bean id="bean1" class="am.ak.spring.data.circular.B">
+        <constructor-arg ref="bean2"/>
+        <property name="targetName" value="bean2"/>
+    </bean>
 </beans>

@@ -1,3 +1,5 @@
+package am.ak.spring.data;
+
 import am.ak.spring.data.service.PetStoreServiceImpl;
 import org.junit.Test;
 

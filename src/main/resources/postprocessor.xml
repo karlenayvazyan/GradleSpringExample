@@ -2,10 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="petStoreService" name="a,b" class="am.ak.spring.data.service.PetStoreServiceImpl" autowire-candidate="false">
-        <property name="accountDao" ref="accountDao"/>
-        <property name="itemDao">
-            <ref bean="itemDao"/>
-        </property>
+    <bean id="message" class="am.ak.spring.data.postpracessor.Message">
+        <property name="message" value="Es shat gidem"/>
     </bean>
+
+    <bean class="am.ak.spring.data.postpracessor.InstantiationTracingBeanPostProcessor"/>
 </beans>

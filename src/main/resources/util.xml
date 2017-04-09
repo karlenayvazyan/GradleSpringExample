@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mapping" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+        <property name="properties">
+            <value>
+                jdbc.driver.className=com.mysql.jdbc.Driver
+                jdbc.url=jdbc:mysql://localhost:3306/mydb
+            </value>
+        </property>
+    </bean>
+
+    <bean id="exampleBeanXML" class="am.ak.spring.data.initdestroybean.ExampleBeanXML"
+          init-method="init" destroy-method="destroy"/>
+
+    <bean id="exampleBeanInterface" class="am.ak.spring.data.initdestroybean.ExampleBeanInterface"/>
+</beans>

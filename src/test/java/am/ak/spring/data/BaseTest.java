@@ -1,4 +1,7 @@
+package am.ak.spring.data;
+
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -13,10 +16,10 @@ import static org.junit.Assert.assertNotNull;
  */
 public class BaseTest {
 
-    protected ApplicationContext applicationContext;
+    protected static ApplicationContext applicationContext;
 
-    @Before
-    public void setUp() {
+    @BeforeClass
+    public static void setUp() {
         applicationContext = new ClassPathXmlApplicationContext("application.xml");
     }
 }
